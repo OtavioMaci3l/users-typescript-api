@@ -1,6 +1,7 @@
-import { IGetUsersController, IGetUsersRepository } from "./protocols"; // Importar HttpResponse
+import { IController } from "../protocols";
+import { IGetUsersRepository } from "./protocols";
 
-export class GetUsersController implements IGetUsersController {
+export class GetUsersController implements IController {
   constructor(private readonly getUsersRepository: IGetUsersRepository) {}
 
   async handle() { // Adicionar tipo de retorno explícito
